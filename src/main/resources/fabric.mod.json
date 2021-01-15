@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "mojank_emoji",
+  "version": "${version}",
+  "name": "Mojank Logo",
+  "description": "Replaces Mojang logo with Mojank emoji from the Fabric Discord server.",
+  "authors": [
+    "magistermaks"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/mojank_emoji/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [],
+    "main": []
+  },
+  "mixins": [
+    "mojank.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": "*",
+    "minecraft": "1.16.x"
+  }
+}

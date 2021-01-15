@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.darktree.mojank.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [],
+  "client": [
+      "MojankMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
