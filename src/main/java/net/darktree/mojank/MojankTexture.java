@@ -17,18 +17,20 @@ public class MojankTexture extends ResourceTexture {
 
     protected TextureData loadTextureData(ResourceManager resourceManager) {
         try {
-            InputStream inputStream = Thread.currentThread().getContextClassLoader().getResourceAsStream("mojank.png");
+            InputStream input = Thread.currentThread().getContextClassLoader().getResourceAsStream("mojank.png");
+            TextureData texture = null;
 
-            TextureData var6;
-            try {
-                var6 = new TextureData(new TextureResourceMetadata(true, true), NativeImage.read(inputStream));
-            } finally {
-                if (inputStream != null) {
-                    inputStream.close();
+            if( input != null ) {
+
+                try {
+                    texture = new TextureData(new TextureResourceMetadata(true, true), NativeImage.read(input));
+                } finally {
+                    input.close();
                 }
+
             }
 
-            return var6;
+            return texture;
         } catch (IOException var18) {
             return new TextureData(var18);
         }

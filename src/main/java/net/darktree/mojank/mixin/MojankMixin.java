@@ -19,7 +19,7 @@ public class MojankMixin {
     private static Identifier LOGO;
 
     @Inject(method = "init(Lnet/minecraft/client/MinecraftClient;)V", at = @At("HEAD"), cancellable=true)
-    private static void loadTextureData(MinecraftClient client, CallbackInfo ci) {
+    private static void init(MinecraftClient client, CallbackInfo ci) {
         client.getTextureManager().registerTexture(LOGO, new MojankTexture(LOGO));
         ci.cancel();
     }
