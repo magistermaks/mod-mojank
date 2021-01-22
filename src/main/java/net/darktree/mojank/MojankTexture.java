@@ -21,18 +21,16 @@ public class MojankTexture extends ResourceTexture {
             TextureData texture = null;
 
             if( input != null ) {
-
                 try {
                     texture = new TextureData(new TextureResourceMetadata(true, true), NativeImage.read(input));
                 } finally {
                     input.close();
                 }
-
             }
 
             return texture;
-        } catch (IOException var18) {
-            return new TextureData(var18);
+        } catch (IOException exception) {
+            return new TextureData(exception);
         }
     }
 
