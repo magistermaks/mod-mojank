@@ -5,7 +5,8 @@
   "name": "Mojank Logo",
   "description": "Replaces Mojang logo with Mojank emoji from the Fabric Discord server.",
   "authors": [
-    "magistermaks"
+    "magistermaks",
+    "Blobanium"
   ],
   "contact": {},
   "license": "MIT",
